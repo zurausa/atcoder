@@ -41,8 +41,6 @@ cnt += n - r + 1とできる
 これを繰り返し、cnt がkより大きければ探索値を切り替える
  '''
 
-import math
-import numpy as np
 n, k = map(int, input().split())
 a = [int(input()) for _ in range(n)]
 
