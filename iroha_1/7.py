@@ -10,6 +10,8 @@ else:
     pnt = 0
     mid = []
     while pos < n - k:
+        # kp問題の逆と考えて距離を重量に置き換えて解いた....はず....
+        # ただ 200 100 2 3みたいな場合にたどり着けなくなるのでNG
         tmp = [v * (i+1) for i, v in enumerate(a[pos+1:min(pos+k+1, n)])]
         mx = 0
         plpos = 0
