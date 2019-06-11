@@ -9,14 +9,14 @@ jud = list(map(int, input().split()))
 ans = 0
 c = True
 for i in range(2 ** n):
-    tmp = list()
     c = True
-    for j in range(m):
-        t = ks[j]
+    ib = format(i, 'b')
+    for iks, j in enumerate(ks):
         ch = 0
-        for m in t:
-            ch += tmp[m]
-        if ch % 2 != jud[j]:
+        for m in j:
+            if len(ib) >= m+1:
+                ch += int(ib[-m-1])
+        if ch % 2 != jud[iks]:
             c = False
             break
     if c:
