@@ -4,7 +4,6 @@ mp = list(map(int, input().split()))
 
 def check(a, b):
     if (n - b - 1) % (a - b) != 0:
-        @
         return False
     if a % (a - b) == 0 and (a + b) >= n - 1:
         return True
@@ -21,4 +20,4 @@ else:
                 continue
             else:
                 ans = max(ans, 0)
-    prunt(ans)
+    print(ans)
